@@ -1,0 +1,17 @@
+{
+  "name": "toolbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npx ts-node ./src/index",
+    "start:bfs": "npx ts-node ./src/graph/bfs.ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.5.3",
+    "@types/node": "^20.14.8"
+  },
+  "private": true
+}
