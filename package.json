@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "start": "npx ts-node ./src/index",
-    "start:bfs": "npx ts-node ./src/graph/bfs.ts"
+    "start:bfs": "npx ts-node ./src/graph/bfs.ts",
+    "start:dfs": "npx ts-node ./src/graph/dfs.ts"
   },
   "dependencies": {},
   "devDependencies": {
