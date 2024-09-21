@@ -25,20 +25,24 @@ export class Stack<T> extends Object {
         return this.stack[0];
     }
 
-    pop(): T | undefined {
-        return this.stack.shift();
+    pop(): T {
+        const item = this.stack.shift();
+
+        if (!item) throw new Error('Out of bounds');
+
+        return item;
     }
 
-    push(item: T): void {
-        this.stack = [item, ...this.stack];
+    push(item: T | T[]): void {
+        if (Array.isArray(item)) {
+            this.stack = [...item, ...this.stack];
+        } else {
+            this.stack = [item, ...this.stack];
+        }
     }
 
     search(item: T): number {
         return this.stack.indexOf(item);
-    }
-
-    set(s: T[]): void {
-        this.stack = s;
     }
 
     static fromQueue<T>(queue: Queue<T>): Stack<T> {
